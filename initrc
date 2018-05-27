@@ -1,0 +1,134 @@
+# set vi mode
+set -o vi
+
+# fix screen
+# xrandr --output HDMI-1 --left-of eDP-1
+# xrandr --output eDP-1 --left-of HDMI-1
+# xrandr --output eDP-1 --rotate right
+
+# disable trackpad
+# synclient TouchpadOff=0
+
+# swap escape with capslock
+setxkbmap -option caps:swapescape
+
+# scripts, chmod 755
+# alias lg='~/.ion/log.ion'
+alias am='~/exp/ambk.exp'
+alias smtp2='~/exp/smtp2.exp'
+alias amo5='~/exp/amo5.exp'
+alias amo6='~/exp/amo6.exp'
+alias amo7='~/exp/amo7.exp'
+alias amo8='~/exp/amo8.exp'
+alias amo9='~/exp/amo9.exp'
+alias amo10='~/exp/amo10.exp'
+alias amsub01='~/exp/amsub01.exp'
+alias amsub02='~/exp/amsub02.exp'
+alias ltsub01='~/exp/ltsub01.exp'
+alias ltsub02='~/exp/ltsub02.exp'
+alias arc00='~/exp/arc00.exp'
+alias arc01='~/exp/arc01.exp'
+alias ve='$EDITOR $HOME/.config/nvim/init.vim'
+alias v='$EDITOR'
+alias c='cicada'
+alias da='~/m/arc'
+alias dh='~/m/hop'
+alias cr='cargo run --'
+alias cb='cargo build'
+alias gr='go run'
+alias s='shiori'
+alias sa='shiori add'
+alias sc='shiori account'
+alias ss='shiori serve'
+alias sp='shiori print'
+alias nt='sudo netstat -tpln'
+alias nta='sudo netstat -tupln'
+alias o='docker'
+alias oc='docker ps -a'
+alias or='docker restart'
+alias obp='docker build -t prometheus .'
+alias orp='docker run -d -p 9090:9090 --network host --name prometheus prometheus'
+alias obb='docker build -t blackbox .'
+alias orb='docker run -d -p 9115:9115 --network host --name blackbox blackbox'
+alias or='docker rm'
+alias oi='docker images'
+alias orc='docker rm'
+alias orca='docker rm $(docker ps -a -q)'
+alias ori='docker rmi'
+alias os='docker stop'
+alias olp='docker logs -t prometheus'
+alias olb='docker logs -t blackbox'
+alias opb='docker run -d -p 9115:9115 --name blackbox blackbox'
+alias opp='docker run -d -p 9090:9090 --name prometheus prometheus'
+alias dy="cd ~/sync"
+alias lg='p ~/m/lab/log/l3.py in'
+alias gp='git push'
+alias gc='git commit -m "'
+alias ga='git add -A'
+alias all='p ~/m/sys/neon.py all'
+alias ice='p ice.py'
+alias si='source ~/.config/ion/initrc'
+alias vl='$EDITOR ~/Documents/login'
+alias vk='$EDITOR ~/Documents/wiki'
+alias vd='$EDITOR ~/Documents/todo'
+alias vs='$EDITOR ~/m/secret.csv'
+alias vw='$EDITOR ~/m/wiki'
+alias vi='$EDITOR ~/.config/ion/initrc'
+alias vv='$EDITOR ~/m/vim'
+alias vh='$EDITOR ~/Documents/mail'
+alias vn='$EDITOR ~/Documents/nmap'
+alias vr='$EDITOR ~/.vimrc'
+alias vc='$EDITOR ~/Documents/rsync'
+alias vp='$EDITOR ~/m/vim/vpress'
+alias vt='$EDITOR ~/.tmux.conf.local'
+alias vf='$EDITOR ~/.config/fish/config.fish'
+alias vm='$EDITOR ~/Documents/hourly'
+alias va='$EDITOR ~/.config/alacritty/alacritty.yml'
+alias dp='cd ~/m/vpress'
+alias ds='cd ~/m/sys'
+alias dg='cd ~/m/rgit'
+alias dl='cd ~/m/rlog'
+alias dw='cd ~/m'
+alias dr='cd ~/m/rsub'
+alias ff='/opt/firefox/firefox'
+alias pm='/opt/prometheus/prometheus --config.file=prometheus.yml'
+alias dn='cd ~/Documents'
+alias db='cd ~/m/b2/b'
+alias p='python3.6'
+alias pi='pip3.6 install --user'
+alias pt='ptipython'
+alias l='exa'
+alias la='exa -aghHlS'
+alias tr='exa -a --long --tree'
+alias rr='rustup run nightly-2016-08-01 ~/.cargo/bin/rusti'
+alias ad='sudo apt update'
+alias ag='sudo apt upgrade'
+alias ai='sudo apt install'
+alias ar='sudo apt remove'
+alias lock='xflock4'
+alias ro='redshift -O 2800K'
+alias rd='redshift'
+alias rf='redshift -O 3700K'
+alias yx='youtube-dl -x'
+alias yv='youtube-dl'
+alias lr='livereload'
+alias dd='cd ~/Downloads'
+alias rd='rdesktop -g 1280x960 -5 -K -r clipboard:CLIPBOARD'
+alias ng='npm list -g --depth=0'
+alias pd='vuepress dev'
+alias pb='vuepress build'
+# default editor
+export EDITOR=nvim
+# passwords
+# path
+export RUST_BACKTRACE=0
+# go config
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+# export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+# n config
+export N_PREFIX=$HOME/n
+export RUST_SRC_PATH='/home/ice/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
+# setup PATH
+# export PATH=$PATH:~/.local/bin:$N_PREFIX/bin
+export PATH=/home/$USER/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/$USER/.local/bin:/home/$USER/n/bin:$GOPATH/bin:$GOROOT/bin:$N_PREFIX/bin:$HOME/.yarn/bin

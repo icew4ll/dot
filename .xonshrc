@@ -1,0 +1,50 @@
+def _ice(*args, stdin=None):
+    cd ~/m/sys and python ice.py
+
+$XONSH_COLOR_STYLE = 'native'
+$PROJECT_DIRS = '~/m'
+$N_PREFIX = '~/n'
+$PATH.append('/home/ice/.cargo/bin')
+$PATH.append('/home/ice/.local/bin')
+$PATH.append('/home/ice/.yarn/bin')
+$PATH.append('/home/ice/n/bin')
+$PATH.append('/home/ice/.fzf/bin')
+$PATH.append('/home/ice/apps/thonny/bin/')
+$FZF_DEFAULT_COMMAND = 'rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+aliases['ice'] = _ice
+aliases['lock'] = ['xscreensaver-command', '-l']
+aliases['vx'] = ['vim', '~/.xonshrc']
+aliases['vi'] = ['vim', '~/m/sys/ice.py']
+aliases['va'] = ['vim', '~/.config/alacritty/alacritty.yml']
+aliases['vc'] = ['vim', '~/.config/xonsh/config.json']
+aliases['vn'] = ['vim', '~/Documents']
+aliases['vl'] = ['vim', '~/Documents/login']
+aliases['vm'] = ['vim', '~/m/mail']
+aliases['vq'] = ['vim', '~/m/sys/getmq.py']
+aliases['vs'] = ['vim', '~/m/sys']
+aliases['vp'] = ['vim', '~/.ptpython/config.py']
+aliases['sx'] = ['source', '~/.xonshrc']
+aliases['vr'] = ['vim', '~/.vimrc']
+aliases['ds'] = ['cd', '~/m/sys']
+aliases['dv'] = ['cd', '~/Videos']
+aliases['dm'] = ['cd', '~/Music']
+aliases['vf'] = ['vim', '~/.config/fish/config.fish']
+aliases['mq'] = ['python', '~/m/sys/getmq.py']
+aliases['p'] = ['python']
+aliases['v'] = ['vim']
+aliases['f'] = ['fzf']
+aliases['pt'] = ['ptipython']
+aliases['vt'] = ['vim', '~/.tmux.conf.local']
+aliases['la'] = ['exa', '-lah']
+aliases['l'] = ['exa', '-lh']
+aliases['wt'] = ['http', 'wttr.in/Seattle']
+aliases['yx'] = ['youtube-dl', '-x']
+aliases['yy'] = ['youtube-dl']
+aliases['vv'] = ['vim', '~/m/vim']
+aliases['gg'] = ['python', '~/m/sys/gitgud.py']
+aliases['sd'] = ['sudo', 'apt', 'update']
+aliases['sg'] = ['sudo', 'apt', 'upgrade']
+aliases['hr1'] = ['python', '/home/ice/p/neo/hr1.py']
+aliases['hr2'] = ['python', '/home/ice/p/neo/hr2.py']
+aliases['hr3'] = ['python', '/home/ice/p/neo/hr3.py']
+aliases['ssh'] = ['ssh-add', '~/.ssh/id_rsa']
