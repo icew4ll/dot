@@ -51,7 +51,6 @@ alias dg='cd ~/m/gitr'
 alias dc='cd ~/m/cmd'
 alias ds='cd ~/Documents/sync'
 alias dd='cd ~/m'
-alias dt='cd ~/m'
 
 # Path to Oh My Fish install.
 set -q XDG_DATA_HOME
