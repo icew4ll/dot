@@ -140,6 +140,7 @@ filetype plugin indent on
 
 " System Settings  ----------------------------------------------------------{{{
 " Neovim Settings
+let g:gitgutter_max_signs=9999
 set termguicolors
 set mouse=a
 " let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
@@ -270,7 +271,35 @@ vnoremap <leader>ga <Plug>(EasyAlign)
 
 " Themes, Commands, etc  ----------------------------------------------------{{{
 syntax on
-colorscheme cabin
+" colorscheme detailed
+" colorscheme chlordane
+" colorscheme doorhinge
+" colorscheme edo_sea
+" colorscheme feral
+colorscheme flattown
+" colorscheme fog
+" colorscheme fokus
+" colorscheme frozen
+" colorscheme fu
+" colorscheme fx
+" colorscheme genericdc-light
+" colorscheme gentooish
+" colorscheme golded
+" colorscheme iangenzo
+
+" colorscheme getafe
+" colorscheme forneus
+" colorscheme enzyme
+" colorscheme ecostation
+" colorscheme donbass
+" colorscheme disciple
+" colorscheme deveiate
+" colorscheme desertink
+" colorscheme desertedocean
+" colorscheme cobalt
+" colorscheme clearance
+" colorscheme scheakur
+" colorscheme cabin
 " colorscheme camo
 " colorscheme bubblegum-256-dark
 " colorscheme brookstream
@@ -318,7 +347,6 @@ colorscheme cabin
 " colorscheme focuspoint
 " colorscheme gotham
 " colorscheme iceberg
-" colorscheme scheakur
 " colorscheme lightning
 " colorscheme lucid
 " colorscheme materialbox
