@@ -2,19 +2,19 @@
 fish_vi_key_bindings
 
 # fix screen
-# xrandr --output HDMI-1 --left-of eDP-1
-xrandr --output eDP-1 --left-of HDMI-1
+xrandr --output HDMI-1 --left-of eDP-1
+# xrandr --output eDP-1 --left-of HDMI-1
 # xrandr --output eDP-1 --rotate right
 
 # swap escape with capslock
 setxkbmap -option caps:swapescape
 
 alias v='nvim'
+alias vb='v ~/m/vim/book'
 alias g='~/m/gitr/target/debug/gitr'
 alias vk='v ~/m/wiki'
 alias s='~/m/spam/target/debug/spam'
 alias va='v ~/.config/alacritty/alacritty.yml'
-alias vs='v ~/m/secret.csv'
 alias vm='v ~/m/spam/src/main.rs'
 alias ve='v ~/.config/nvim/init.vim'
 alias ro='redshift -O 2000K'
@@ -27,9 +27,9 @@ alias vg='v ~/m/gitr/src/main.rs'
 alias sf='source ~/.config/fish/config.fish'
 alias vf='v ~/.config/fish/config.fish'
 alias vv='v /home/fish/m/vim'
-alias vp='v $HOME/.config/fish/pass.fish'
+alias vs='v $HOME/.config/fish/pass.fish'
 alias vi='v /home/fish/.config/ion/initrc'
-alias vc='v $HOME/Documents/rsync'
+alias vy='v $HOME/Documents/rsync'
 alias ad='sudo apt update'
 alias ag='sudo apt upgrade'
 alias yx='youtube-dl -x'
@@ -42,6 +42,10 @@ alias cb='cargo build'
 alias ca='cargo install-update -a'
 alias rs='rustup self update'
 alias ru='rustup update'
+alias vc='v $HOME/m/cmd/src/main.rs'
+alias c='~/m/cmd/target/debug/cmd'
+alias vp='v $HOME/m/psp/src/main.rs'
+alias p='~/m/psp/target/debug/psp'
 # directories
 alias de='cd ~/Documents/exp'
 alias dn='cd ~/Documents'
@@ -51,6 +55,8 @@ alias dg='cd ~/m/gitr'
 alias dc='cd ~/m/cmd'
 alias ds='cd ~/Documents/sync'
 alias dd='cd ~/m'
+alias dp='cd ~/m/psp'
+alias pi='pip3.6 install --user'
 
 # Path to Oh My Fish install.
 set -q XDG_DATA_HOME
