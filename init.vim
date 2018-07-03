@@ -273,10 +273,10 @@ vnoremap <leader>ga <Plug>(EasyAlign)
 syntax on
 " colorscheme detailed
 " colorscheme chlordane
-" colorscheme doorhinge
+colorscheme doorhinge
 " colorscheme edo_sea
 " colorscheme feral
-colorscheme flattown
+" colorscheme flattown
 " colorscheme fog
 " colorscheme fokus
 " colorscheme frozen
