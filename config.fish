@@ -2,8 +2,8 @@
 fish_vi_key_bindings
 
 # fix screen
-xrandr --output HDMI-1 --left-of eDP-1
-# xrandr --output eDP-1 --left-of HDMI-1
+# xrandr --output HDMI-1 --left-of eDP-1
+xrandr --output eDP-1 --left-of HDMI-1
 # xrandr --output eDP-1 --rotate right
 
 # swap escape with capslock
@@ -15,7 +15,7 @@ alias g='~/m/gitr/target/debug/gitr'
 alias vk='v ~/m/wiki'
 alias s='~/m/spam/target/debug/spam'
 alias va='v ~/.config/alacritty/alacritty.yml'
-alias vm='v ~/m/spam/src/main.rs'
+alias vm='v ~/.muttrc'
 alias vr='v ~/.config/nvim/init.vim'
 alias ve='v ~/Documents/email'
 alias ro='redshift -O 2200K'

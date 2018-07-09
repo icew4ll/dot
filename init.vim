@@ -271,9 +271,9 @@ vnoremap <leader>ga <Plug>(EasyAlign)
 
 " Themes, Commands, etc  ----------------------------------------------------{{{
 syntax on
-" colorscheme detailed
+colorscheme detailed
 " colorscheme chlordane
-colorscheme doorhinge
+" colorscheme doorhinge
 " colorscheme edo_sea
 " colorscheme feral
 " colorscheme flattown
