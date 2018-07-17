@@ -271,7 +271,7 @@ vnoremap <leader>ga <Plug>(EasyAlign)
 
 " Themes, Commands, etc  ----------------------------------------------------{{{
 syntax on
-colorscheme detailed
+" colorscheme detailed
 " colorscheme chlordane
 " colorscheme doorhinge
 " colorscheme edo_sea
@@ -282,11 +282,28 @@ colorscheme detailed
 " colorscheme frozen
 " colorscheme fu
 " colorscheme fx
-" colorscheme genericdc-light
 " colorscheme gentooish
 " colorscheme golded
 " colorscheme iangenzo
+" colorscheme jhdark
+" colorscheme jiks
+" colorscheme kiss
+" colorscheme kkruby
+" colorscheme leo
+" colorscheme lilac
+colorscheme lilydjwg_dark
+" colorscheme liquidcarbon
 
+" colorscheme icansee
+" colorscheme inori
+" colorscheme ironman
+" colorscheme itg_flat
+" colorscheme jammy
+" colorscheme kalahari
+" colorscheme lettuce
+
+" colorscheme gobo
+" colorscheme github
 " colorscheme getafe
 " colorscheme forneus
 " colorscheme enzyme
