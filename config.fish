@@ -10,6 +10,7 @@ xrandr --output eDP-1 --left-of HDMI-1
 setxkbmap -option caps:swapescape
 
 alias v='nvim'
+alias vt='v ~/.tmux.conf.local'
 alias vb='v ~/m/vim/book'
 alias g='~/m/gitr/target/debug/gitr'
 alias vk='v ~/m/wiki'
