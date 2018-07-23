@@ -10,7 +10,6 @@ xrandr --output eDP-1 --left-of HDMI-1
 setxkbmap -option caps:swapescape
 
 alias v='nvim'
-alias vt='v ~/.tmux.conf.local'
 alias vb='v ~/m/vim/book'
 alias g='~/m/gitr/target/debug/gitr'
 alias vk='v ~/m/wiki'
@@ -52,6 +51,8 @@ alias c='~/m/cmd/target/debug/cmd'
 alias y='python3.7'
 alias p='~/m/psp/target/debug/psp'
 alias h='~/m/hda/target/debug/hda'
+alias vi='v ~/m/file/src/main.rs'
+alias di='cd ~/m/file'
 # python
 alias sc='soundscrape'
 # directories
@@ -80,6 +81,7 @@ source $HOME/.config/fish/pass.fish
 
 # add to path
 set -gx N_PREFIX $HOME/n
+# set -gx PIP_TARGET $HOME/.local/bin
 set -gx PATH $HOME/.yarn/bin $PATH
 set -gx PATH $N_PREFIX/bin $PATH
 set -gx RUST_SRC_PATH $HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src

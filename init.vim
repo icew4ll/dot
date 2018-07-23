@@ -284,7 +284,6 @@ syntax on
 " colorscheme fx
 " colorscheme gentooish
 " colorscheme golded
-" colorscheme iangenzo
 " colorscheme jhdark
 " colorscheme jiks
 " colorscheme kiss
@@ -293,6 +292,33 @@ syntax on
 " colorscheme lilac
 colorscheme lilydjwg_dark
 " colorscheme liquidcarbon
+" colorscheme luinnar
+" colorscheme lumberjack
+" colorscheme madeofcode
+" colorscheme mango
+" colorscheme marklar
+" colorscheme maroloccio2
+" colorscheme matrix
+" colorscheme mizore
+" colorscheme mod8
+" colorscheme morning
+" colorscheme nature
+" colorscheme night
+" colorscheme obsidian
+" colorscheme paintbox
+" colorscheme penultimate
+" colorscheme peppers
+" colorscheme pw
+" colorscheme rainbow_night
+" colorscheme reloaded
+" colorscheme scite
+" colorscheme shobogenzo
+" colorscheme softblue
+" colorscheme swamplight
+" colorscheme tidy
+" colorscheme underwater
+" colorscheme vanzan_color
+" colorscheme watermark
 
 " colorscheme icansee
 " colorscheme inori

@@ -124,7 +124,7 @@ custom_cursor_colors: false
 # Colors (Tomorrow Night Bright)
 colors:
   primary:
-    background: '#1c1c1c'
+    background: '#262626'
     foreground: '#d0d0d0'
   cursor:
     text: '0x2E3440'
