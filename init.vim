@@ -290,7 +290,7 @@ syntax on
 " colorscheme kkruby
 " colorscheme leo
 " colorscheme lilac
-colorscheme lilydjwg_dark
+" colorscheme lilydjwg_dark
 " colorscheme liquidcarbon
 " colorscheme luinnar
 " colorscheme lumberjack
@@ -314,7 +314,7 @@ colorscheme lilydjwg_dark
 " colorscheme scite
 " colorscheme shobogenzo
 " colorscheme softblue
-" colorscheme swamplight
+colorscheme swamplight
 " colorscheme tidy
 " colorscheme underwater
 " colorscheme vanzan_color

@@ -69,7 +69,8 @@ font:
     # family: mononoki Nerd Font
     # family: ShureTechMono Nerd Font
     # family: LiterationMono Nerd Font
-    family: MesloLGMDZ Nerd Font
+    # family: MesloLGMDZ Nerd Font
+    family: SauceCodePro Nerd Font
     # family: CodeNewRoman Nerd Font
     # family: DroidSansMono Nerd Font
     # family: AurulentSansMono Nerd Font
@@ -78,17 +79,14 @@ font:
 
   # The bold font face
   bold:
-    family: MesloLGMDZ Nerd Font
-    # family: Insonsolata Nerd Font
-    # family: monospace # should be "Menlo" or something on macOS.
+    family: SauceCodePro Nerd Font
     # Style can be specified to pick a specific face.
     # style: Bold
     # family: mononoki Nerd Font
 
   # The italic font face
   italic:
-    # family: monospace # should be "Menlo" or something on macOS.
-    family: MesloLGMDZ Nerd Font
+    family: SauceCodePro Nerd Font
     # Style can be specified to pick a specific face.
     # style: Italic
     # family: mononoki Nerd Font
@@ -124,8 +122,8 @@ custom_cursor_colors: false
 # Colors (Tomorrow Night Bright)
 colors:
   primary:
-    background: '#262626'
-    foreground: '#d0d0d0'
+    background: '#e4e4e4'
+    foreground: '#232323'
   cursor:
     text: '0x2E3440'
     cursor: '0xD8DEE9'
