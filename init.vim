@@ -287,7 +287,7 @@ syntax on
 " colorscheme jhdark
 " colorscheme jiks
 " colorscheme kiss
-colorscheme kkruby
+" colorscheme kkruby
 " colorscheme leo
 " colorscheme lilac
 " colorscheme lilydjwg_dark
@@ -341,7 +341,6 @@ colorscheme kkruby
 " colorscheme clearance
 " colorscheme scheakur
 " colorscheme cabin
-" colorscheme camo
 " colorscheme bubblegum-256-dark
 " colorscheme brookstream
 " colorscheme blackbeauty
@@ -353,7 +352,7 @@ colorscheme kkruby
 " colorscheme base16-ateliercave
 " colorscheme antares
 " colorscheme abra
-" colorscheme VIvid
+colorscheme VIvid
 " colorscheme Tomorrow-Night
 " colorscheme Tomorrow-Night-Eighties
 " colorscheme Spink
