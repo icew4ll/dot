@@ -287,7 +287,7 @@ syntax on
 " colorscheme jhdark
 " colorscheme jiks
 " colorscheme kiss
-" colorscheme kkruby
+colorscheme kkruby
 " colorscheme leo
 " colorscheme lilac
 " colorscheme lilydjwg_dark
@@ -314,11 +314,9 @@ syntax on
 " colorscheme scite
 " colorscheme shobogenzo
 " colorscheme softblue
-colorscheme swamplight
+" colorscheme swamplight
 " colorscheme tidy
 " colorscheme underwater
-" colorscheme vanzan_color
-" colorscheme watermark
 
 " colorscheme icansee
 " colorscheme inori
@@ -1037,6 +1035,7 @@ nnoremap <leader>lcs :LanguageClientStart<CR>
 let g:LanguageClient_autoStart = 0
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rustup', 'run', 'stable', 'rls']}
+    " \ 'python': ['/usr/local/bin/pyls'],
 " noremap <silent> H :call LanguageClient_textDocument_hover()<CR>
 " noremap <silent> Z :call LanguageClient_textDocument_definition()<CR>
 " noremap <silent> R :call LanguageClient_textDocument_rename()<CR>
