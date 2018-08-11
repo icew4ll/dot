@@ -331,7 +331,7 @@ syntax on
 " colorscheme getafe
 " colorscheme forneus
 " colorscheme enzyme
-" colorscheme ecostation
+colorscheme ecostation
 " colorscheme donbass
 " colorscheme disciple
 " colorscheme deveiate
@@ -352,27 +352,21 @@ syntax on
 " colorscheme base16-ateliercave
 " colorscheme antares
 " colorscheme abra
-colorscheme VIvid
+" colorscheme VIvid
 " colorscheme Tomorrow-Night
 " colorscheme Tomorrow-Night-Eighties
-" colorscheme Spink
-" colorscheme Revolution
 " colorscheme Chasing_Logic
-" colorscheme ChocolatePapaya
 " colorscheme ChocolateLiquor
 " colorscheme pw
 " colorscheme pt_black
 " colorscheme ps_color
 " colorscheme penultimate
-" colorscheme pencil
-" colorscheme mushroom
 " colorscheme chance-of-storm
 " colorscheme greenvision
 " colorscheme hhazure
 " colorscheme birds-of-paradise
 " colorscheme obsidian
 " colorscheme paintbox
-" colorscheme flatland
 " colorscheme flattened_dark
 " colorscheme flattr
 " colorscheme gemcolors
@@ -385,13 +379,8 @@ colorscheme VIvid
 " colorscheme deep-space
 " colorscheme dracula
 " colorscheme focuspoint
-" colorscheme gotham
-" colorscheme iceberg
 " colorscheme lightning
 " colorscheme lucid
-" colorscheme materialbox
-" colorscheme meta5
-" colorscheme minimalist
 " colorscheme molokai
 " colorscheme one
 "}}}

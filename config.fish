@@ -2,8 +2,8 @@
 fish_vi_key_bindings
 
 # fix screen
-# xrandr --output HDMI-1 --left-of eDP-1
-xrandr --output eDP-1 --left-of HDMI-1
+xrandr --output HDMI-1 --left-of eDP-1
+# xrandr --output eDP-1 --left-of HDMI-1
 # xrandr --output eDP-1 --rotate right
 
 # swap escape with capslock
@@ -22,6 +22,7 @@ alias ro='redshift -O 2200K'
 alias rd='rdesktop -g 1280x960 -5 -K -r clipboard:CLIPBOARD'
 alias rf='redshift -O 3700K'
 alias vl='v ~/m/file/list'
+alias ll='v ~/Documents/login'
 alias vo='v ~/Documents/hourly'
 alias vd='v ~/Documents/todo'
 alias vg='v ~/m/gitr/src/main.rs'
@@ -54,14 +55,20 @@ alias h='~/m/hda/target/debug/hda'
 alias i='cd ~/m/file;~/m/file/target/debug/file'
 alias vi='v ~/m/file/src/main.rs'
 alias di='cd ~/m/file'
+alias va='v ~/m/wall/src/main.rs'
+alias vw='v ~/m/wel/src/main.rs'
+alias dw='cd ~/m/wel'
+alias bw='cd ~/m/wel;cargo build'
+alias w='cd ~/m/wel;~/m/wel/target/debug/wel'
 # python
 alias sc='soundscrape'
+alias ts='termtosvg'
 # directories
 alias de='cd ~/Documents/exp'
 alias dh='cd ~/m/hda'
 alias dn='cd ~/Documents'
 alias dm='cd ~/m/spam'
-alias dw='cd ~/m/wiki'
+# alias dw='cd ~/m/wiki'
 alias dg='cd ~/m/gitr'
 alias dc='cd ~/m/cmd'
 alias ds='cd ~/Documents/sync'
@@ -78,7 +85,7 @@ set -q XDG_DATA_HOME
 source $OMF_PATH/init.fish
 
 # source passwords
-source $HOME/.config/fish/pass.fish
+source $HOME/.env
 
 # add to path
 set -gx N_PREFIX $HOME/n
