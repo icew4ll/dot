@@ -331,7 +331,7 @@ syntax on
 " colorscheme getafe
 " colorscheme forneus
 " colorscheme enzyme
-colorscheme ecostation
+" colorscheme ecostation
 " colorscheme donbass
 " colorscheme disciple
 " colorscheme deveiate
@@ -351,7 +351,7 @@ colorscheme ecostation
 " colorscheme base16-atelierlakeside
 " colorscheme base16-ateliercave
 " colorscheme antares
-" colorscheme abra
+colorscheme abra
 " colorscheme VIvid
 " colorscheme Tomorrow-Night
 " colorscheme Tomorrow-Night-Eighties

@@ -2,8 +2,8 @@
 fish_vi_key_bindings
 
 # fix screen
-xrandr --output HDMI-1 --left-of eDP-1
-# xrandr --output eDP-1 --left-of HDMI-1
+# xrandr --output HDMI-1 --left-of eDP-1
+xrandr --output eDP-1 --left-of HDMI-1
 # xrandr --output eDP-1 --rotate right
 
 # swap escape with capslock
@@ -21,7 +21,7 @@ alias ve='v ~/Documents/email'
 alias ro='redshift -O 2200K'
 alias rd='rdesktop -g 1280x960 -5 -K -r clipboard:CLIPBOARD'
 alias rf='redshift -O 3700K'
-alias vl='v ~/m/file/list'
+alias vl='v ~/m/wel/list'
 alias ll='v ~/Documents/login'
 alias vo='v ~/Documents/hourly'
 alias vd='v ~/Documents/todo'
@@ -29,8 +29,8 @@ alias vg='v ~/m/gitr/src/main.rs'
 alias sf='source ~/.config/fish/config.fish'
 alias vf='v ~/.config/fish/config.fish'
 alias vv='v /home/fish/m/vim'
-alias vs='v $HOME/.config/fish/pass.fish'
-alias vi='v /home/fish/.config/ion/initrc'
+alias vs='v $HOME/.env'
+# alias vi='v /home/fish/.config/ion/initrc'
 alias vy='v $HOME/Documents/rsync'
 alias ad='sudo apt update'
 alias ag='sudo apt upgrade'
@@ -52,14 +52,16 @@ alias c='~/m/cmd/target/debug/cmd'
 alias y='python3.7'
 alias p='~/m/psp/target/debug/psp'
 alias h='~/m/hda/target/debug/hda'
-alias i='cd ~/m/file;~/m/file/target/debug/file'
-alias vi='v ~/m/file/src/main.rs'
-alias di='cd ~/m/file'
-alias va='v ~/m/wall/src/main.rs'
+alias vi='v ~/m/info/src/main.rs'
+alias vll='v ~/m/wall/src/main.rs'
+alias ll='cd ~/m/wall;~/m/wall/target/debug/wall'
 alias vw='v ~/m/wel/src/main.rs'
 alias dw='cd ~/m/wel'
 alias bw='cd ~/m/wel;cargo build'
 alias w='cd ~/m/wel;~/m/wel/target/debug/wel'
+alias i='cd ~/m/info;~/m/info/target/debug/info'
+alias di='cd ~/m/info'
+alias bi='cd ~/m/info;cargo build'
 # python
 alias sc='soundscrape'
 alias ts='termtosvg'
@@ -86,6 +88,9 @@ source $OMF_PATH/init.fish
 
 # source passwords
 source $HOME/.env
+
+# set editor for lf
+set -gx EDITOR nvim
 
 # add to path
 set -gx N_PREFIX $HOME/n
