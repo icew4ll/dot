@@ -67,7 +67,8 @@ font:
     # family: Lekton Nerd Font
     # family: mplus Nerd Font
     # family: mononoki Nerd Font
-    family: Monoid Nerd Font
+    # family: Monoid Nerd Font
+    # family: ProggyCleanTT Nerd Font
     # family: ShureTechMono Nerd Font
     # family: LiterationMono Nerd Font
     # family: MesloLGMDZ Nerd Font
@@ -75,6 +76,12 @@ font:
     # family: FuraMono Nerd Font
     # family: InconsolataGo Nerd Font
     # family: CodeNewRoman Nerd Font
+    # family: GohuFont Nerd Font
+    # family: BitstreamVeraSansMono Nerd Font
+    # family: 3270Medium Nerd Font
+    # family: FantasqueSansMono Nerd Font
+    family: BlexMono Nerd Font
+    # family: FantasqueSansMono Nerd Font
     # family: DroidSansMono Nerd Font
     # family: AurulentSansMono Nerd Font
     # Style can be specified to pick a specific face.
@@ -82,20 +89,20 @@ font:
 
   # The bold font face
   bold:
-    family: Monoid Nerd Font
+    family: BlexMono Nerd Font
     # Style can be specified to pick a specific face.
     # style: Bold
     # family: mononoki Nerd Font
 
   # The italic font face
   italic:
-    family: Monoid Nerd Font
+    family: BlexMono Nerd Font
     # Style can be specified to pick a specific face.
     # style: Italic
     # family: mononoki Nerd Font
 
   # Point size of the font
-  size: 18.0
+  size: 20.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -125,8 +132,8 @@ custom_cursor_colors: false
 # Colors (Tomorrow Night Bright)
 colors:
   primary:
-    background: '#262626'
-    foreground: '#87d75f'
+    background: '#3b4252'
+    foreground: '#5faf5f'
   cursor:
     text: '0x2E3440'
     cursor: '0xD8DEE9'

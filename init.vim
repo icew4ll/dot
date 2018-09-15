@@ -6,11 +6,13 @@ endif
 
 set runtimepath+=~/.config/nvim/repos/github.com/Shougo/dein.vim/
 call dein#begin(expand('~/.config/nvim'))
+call dein#add('epeli/slimux')
 call dein#add('autozimu/LanguageClient-neovim', {
     \ 'rev': 'next',
     \ 'build': './install.sh',
     \ })
 call dein#add('rafi/awesome-vim-colorschemes')
+call dein#add('rhysd/vim-color-spring-night')
 " call dein#add('sebastianmarkow/deoplete-rust')
 call dein#add('flazz/vim-colorschemes')
 call dein#add('Shougo/dein.vim')
@@ -140,6 +142,7 @@ filetype plugin indent on
 
 " System Settings  ----------------------------------------------------------{{{
 " Neovim Settings
+set t_Co=256
 let g:gitgutter_max_signs=9999
 set termguicolors
 set mouse=a
@@ -271,6 +274,7 @@ vnoremap <leader>ga <Plug>(EasyAlign)
 
 " Themes, Commands, etc  ----------------------------------------------------{{{
 syntax on
+" colorscheme spring-night
 " colorscheme detailed
 " colorscheme chlordane
 " colorscheme doorhinge
@@ -296,8 +300,6 @@ syntax on
 " colorscheme lumberjack
 " colorscheme madeofcode
 " colorscheme mango
-" colorscheme marklar
-" colorscheme maroloccio2
 " colorscheme matrix
 " colorscheme mizore
 " colorscheme mod8
@@ -314,14 +316,10 @@ syntax on
 " colorscheme scite
 " colorscheme shobogenzo
 " colorscheme softblue
-" colorscheme swamplight
-" colorscheme tidy
 " colorscheme underwater
 
 " colorscheme icansee
 " colorscheme inori
-" colorscheme ironman
-" colorscheme itg_flat
 " colorscheme jammy
 " colorscheme kalahari
 " colorscheme lettuce
@@ -329,7 +327,7 @@ syntax on
 " colorscheme gobo
 " colorscheme github
 " colorscheme getafe
-" colorscheme forneus
+colorscheme forneus
 " colorscheme enzyme
 " colorscheme ecostation
 " colorscheme donbass
@@ -351,7 +349,7 @@ syntax on
 " colorscheme base16-atelierlakeside
 " colorscheme base16-ateliercave
 " colorscheme antares
-colorscheme abra
+" colorscheme abra
 " colorscheme VIvid
 " colorscheme Tomorrow-Night
 " colorscheme Tomorrow-Night-Eighties
@@ -778,7 +776,8 @@ tmap <C-;> <C-\><C-n>:TmuxNavigatePrevious<cr>
 "}}}
 
 " vim-airline ---------------------------------------------------------------{{{
-
+" use spring night theme airline
+let g:airline_theme = 'spring_night'
 let g:webdevicons_enable_airline_statusline = 0
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
@@ -1028,4 +1027,16 @@ let g:LanguageClient_serverCommands = {
 " noremap <silent> Z :call LanguageClient_textDocument_definition()<CR>
 " noremap <silent> R :call LanguageClient_textDocument_rename()<CR>
 " noremap <silent> S :call LanugageClient_textDocument_documentSymbol()<CR>
+" }}}
+" slimux {{{
+set shell=/bin/bash
+map <Leader>l :SlimuxREPLSendLine<CR>
+vmap <Leader>l :SlimuxREPLSendSelection<CR>
+" vnoremap <Leader>s :<C-w>SlimuxShellRun %cpaste<CR>:'<,'>SlimuxREPLSendSelection<CR>:SlimuxShellRun<CR>
+" map <Leader>u :SlimuxREPLSendBuffer<CR>
+" map <Leader>a :SlimuxShellLast<CR>
+" map <Leader>k :SlimuxSendKeysLast<CR>
+" ONLY FOR vim-slime
+" let g:slime_target = "tmux"
+" let g:slime_paste_file = "$HOME/.slime_paste"
 " }}}
