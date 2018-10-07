@@ -6,6 +6,9 @@ endif
 
 set runtimepath+=~/.config/nvim/repos/github.com/Shougo/dein.vim/
 call dein#begin(expand('~/.config/nvim'))
+call dein#add('lotabout/skim', { 'dir': '~/.skim', 'do': './install' })
+" call dein#add('SirVer/ultisnips')
+" call dein#add('honza/vim-snippets')
 call dein#add('epeli/slimux')
 call dein#add('autozimu/LanguageClient-neovim', {
     \ 'rev': 'next',
@@ -71,7 +74,7 @@ call dein#add('christoomey/vim-tmux-navigator')
 call dein#add('tpope/vim-surround')
 call dein#add('tomtom/tcomment_vim')
 " call dein#add('scrooloose/nerdcommenter')
-call dein#add('mattn/emmet-vim')
+" call dein#add('mattn/emmet-vim')
 call dein#add('sbdchd/neoformat')
 " deoplete stuff
 call dein#add('Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' })
@@ -123,7 +126,7 @@ call dein#add('vim-airline/vim-airline')
 call dein#local('~/GitHub', {},['nvim-typescript'])
 call dein#add('junegunn/goyo.vim')
 call dein#add('amix/vim-zenroom2')
-call dein#local('~/GitHub', {}, ['ionic-snippets'])
+" call dein#local('~/GitHub', {}, ['ionic-snippets'])
 " call dein#add('euclio/vim-markdown-composer', {'build': 'cargo build --release'})
 call dein#add('sjl/vitality.vim')
 call dein#add('sjl/gundo.vim')
@@ -142,7 +145,13 @@ filetype plugin indent on
 
 " System Settings  ----------------------------------------------------------{{{
 " Neovim Settings
-set t_Co=256
+" setup neosnip
+if !has('nvim')
+  call dein#add('roxma/nvim-yarp')
+  call dein#add('roxma/vim-hug-neovim-rpc')
+endif
+set rtp+=~/.skim " skim setup
+set t_Co=256 "set terminal 256 colors
 let g:gitgutter_max_signs=9999
 set termguicolors
 set mouse=a
@@ -274,6 +283,12 @@ vnoremap <leader>ga <Plug>(EasyAlign)
 
 " Themes, Commands, etc  ----------------------------------------------------{{{
 syntax on
+" colorscheme abra
+" colorscheme penultimate
+" colorscheme chance-of-storm
+" colorscheme bubblegum-256-dark
+" colorscheme forneus
+" colorscheme ecostation
 " colorscheme spring-night
 " colorscheme detailed
 " colorscheme chlordane
@@ -303,7 +318,6 @@ syntax on
 " colorscheme matrix
 " colorscheme mizore
 " colorscheme mod8
-" colorscheme morning
 " colorscheme nature
 " colorscheme night
 " colorscheme obsidian
@@ -316,7 +330,7 @@ syntax on
 " colorscheme scite
 " colorscheme shobogenzo
 " colorscheme softblue
-" colorscheme underwater
+colorscheme underwater
 
 " colorscheme icansee
 " colorscheme inori
@@ -327,9 +341,7 @@ syntax on
 " colorscheme gobo
 " colorscheme github
 " colorscheme getafe
-colorscheme forneus
 " colorscheme enzyme
-" colorscheme ecostation
 " colorscheme donbass
 " colorscheme disciple
 " colorscheme deveiate
@@ -339,17 +351,14 @@ colorscheme forneus
 " colorscheme clearance
 " colorscheme scheakur
 " colorscheme cabin
-" colorscheme bubblegum-256-dark
 " colorscheme brookstream
 " colorscheme blackbeauty
 " colorscheme apprentice
-" colorscheme adaryn
 " colorscheme bayQua
 " colorscheme base16-railscasts
 " colorscheme base16-atelierlakeside
 " colorscheme base16-ateliercave
 " colorscheme antares
-" colorscheme abra
 " colorscheme VIvid
 " colorscheme Tomorrow-Night
 " colorscheme Tomorrow-Night-Eighties
@@ -358,8 +367,6 @@ colorscheme forneus
 " colorscheme pw
 " colorscheme pt_black
 " colorscheme ps_color
-" colorscheme penultimate
-" colorscheme chance-of-storm
 " colorscheme greenvision
 " colorscheme hhazure
 " colorscheme birds-of-paradise
@@ -585,24 +592,21 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['sql'] = ''
 
 " }}}
 
-" Snipppets -----------------------------------------------------------------{{{
+" Snippets -----------------------------------------------------------------{{{
 
 " Enable snipMate compatibility feature.
 let g:neosnippet#enable_snipmate_compatibility = 1
-" let g:neosnippet#snippets_directory='~/GitHub/ionic-snippets'
-" let g:neosnippet#expand_word_boundary = 1
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+let g:neosnippet#snippets_directory='~/.snip'
+imap <expr><TAB>
+ \ pumvisible() ? "\<C-n>" :
+ \ neosnippet#expandable_or_jumpable() ?
+ \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+ \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
-" SuperTab like snippets behavior.
-" imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-" \ "\<Plug>(neosnippet_expand_or_jump)"
-" \: pumvisible() ? "\<C-n>" : "\<TAB>"
-" smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-" \ "\<Plug>(neosnippet_expand_or_jump)"
-" \: "\<TAB>"
-
+imap <expr><silent><CR> pumvisible() ? deoplete#mappings#close_popup() .
+      \ "\<Plug>(neosnippet_jump_or_expand)" : "\<CR>"
+smap <silent><CR> <Plug>(neosnippet_jump_or_expand)
 "}}}
 
 " Deoplete ------------------------------------------------------------------{{{
@@ -645,33 +649,33 @@ let g:deoplete#ignore_sources._ = ['around']
 
 " Emmet customization -------------------------------------------------------{{{
 
-" Remapping <C-y>, just doesn't cut it.
-function! s:expand_html_tab()
-  " try to determine if we're within quotes or tags.
-  " if so, assume we're in an emmet fill area.
-  let line = getline('.')
-  if col('.') < len(line)
-    let line = matchstr(line, '[">][^<"]*\%'.col('.').'c[^>"]*[<"]')
-    if len(line) >= 2
-      return "\<C-n>"
-    endif
-  endif
-  " expand anything emmet thinks is expandable.
-  if emmet#isExpandable()
-    return emmet#expandAbbrIntelligent("\<tab>")
-    " return "\<C-y>,"
-  endif
-  " return a regular tab character
-  return "\<tab>"
-endfunction
-" let g:user_emmet_expandabbr_key='<Tab>'
-" imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
-
-autocmd FileType html,css,scss imap <silent><buffer><expr><tab> <sid>expand_html_tab()
-let g:user_emmet_mode='a'
-let g:user_emmet_complete_tag = 0
-let g:user_emmet_install_global = 0
-autocmd FileType html,css,scss EmmetInstall
+" " Remapping <C-y>, just doesn't cut it.
+" function! s:expand_html_tab()
+"   " try to determine if we're within quotes or tags.
+"   " if so, assume we're in an emmet fill area.
+"   let line = getline('.')
+"   if col('.') < len(line)
+"     let line = matchstr(line, '[">][^<"]*\%'.col('.').'c[^>"]*[<"]')
+"     if len(line) >= 2
+"       return "\<C-n>"
+"     endif
+"   endif
+"   " expand anything emmet thinks is expandable.
+"   if emmet#isExpandable()
+"     return emmet#expandAbbrIntelligent("\<tab>")
+"     " return "\<C-y>,"
+"   endif
+"   " return a regular tab character
+"   return "\<tab>"
+" endfunction
+" " let g:user_emmet_expandabbr_key='<Tab>'
+" " imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+"
+" autocmd FileType html,css,scss imap <silent><buffer><expr><tab> <sid>expand_html_tab()
+" let g:user_emmet_mode='a'
+" let g:user_emmet_complete_tag = 0
+" let g:user_emmet_install_global = 0
+" autocmd FileType html,css,scss EmmetInstall
 "}}}
 
 " Denite --------------------------------------------------------------------{{{
@@ -761,17 +765,17 @@ let s:menus.git.command_candidates = [
 
 " Navigate between vim buffers and tmux panels ------------------------------{{{
 
-let g:tmux_navigator_no_mappings = 1
-nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
-nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
-nnoremap <silent> <C-;> :TmuxNavigatePrevious<cr>
-tmap <C-j> <C-\><C-n>:TmuxNavigateDown<cr>
-tmap <C-k> <C-\><C-n>:TmuxNavigateUp<cr>
-tmap <C-l> <C-\><C-n>:TmuxNavigateRight<cr>
-tmap <C-h> <C-\><C-n>:TmuxNavigateLeft<CR>
-tmap <C-;> <C-\><C-n>:TmuxNavigatePrevious<cr>
+" let g:tmux_navigator_no_mappings = 1
+" nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+" nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
+" nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+" nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
+" nnoremap <silent> <C-;> :TmuxNavigatePrevious<cr>
+" tmap <C-j> <C-\><C-n>:TmuxNavigateDown<cr>
+" tmap <C-k> <C-\><C-n>:TmuxNavigateUp<cr>
+" tmap <C-l> <C-\><C-n>:TmuxNavigateRight<cr>
+" tmap <C-h> <C-\><C-n>:TmuxNavigateLeft<CR>
+" tmap <C-;> <C-\><C-n>:TmuxNavigatePrevious<cr>
 
 "}}}
 
@@ -1015,7 +1019,6 @@ let g:racer_cmd = '$HOME/.cargo/bin/racer'
 " let g:deoplete#sources#rust#rust_source_path='$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
 " let g:deoplete#sources#rust#disable_keymap = 1
 "}}}
-
 " << LSP >> {{{
 nnoremap <leader>lcs :LanguageClientStart<CR>
 " if you want it to turn on automatically

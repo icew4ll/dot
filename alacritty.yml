@@ -77,10 +77,12 @@ font:
     # family: InconsolataGo Nerd Font
     # family: CodeNewRoman Nerd Font
     # family: GohuFont Nerd Font
+    # family: OverpassMono Nerd Font
     # family: BitstreamVeraSansMono Nerd Font
     # family: 3270Medium Nerd Font
     # family: FantasqueSansMono Nerd Font
     family: BlexMono Nerd Font
+    # family: BitstreamVeraSansMono Nerd Font
     # family: FantasqueSansMono Nerd Font
     # family: DroidSansMono Nerd Font
     # family: AurulentSansMono Nerd Font
@@ -102,7 +104,7 @@ font:
     # family: mononoki Nerd Font
 
   # Point size of the font
-  size: 20.0
+  size: 16.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -132,8 +134,8 @@ custom_cursor_colors: false
 # Colors (Tomorrow Night Bright)
 colors:
   primary:
-    background: '#3b4252'
-    foreground: '#5faf5f'
+    background: '#3a3a3a'
+    foreground: '#eeeeee'
   cursor:
     text: '0x2E3440'
     cursor: '0xD8DEE9'
