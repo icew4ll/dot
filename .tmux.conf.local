@@ -1,9 +1,19 @@
+# refresh tmux settings (in tmux command mode :)
+# source-file ~/.tmux.conf.local
 # tmux changes not taking effect?  restart
 # prefix
+set -g prefix C-h
 unbind C-b
 unbind C-a
-set -g prefix C-h
 bind C-h send-prefix
+
+# force a reload of the config file
+# unbind ^R
+# bind ^R source-file ~/.tmux.conf
+
+# quick pane cycling
+# unbind C-h
+# bind C-h select-pane -t :.+
 
 # set xterm for vim colors to work
 set -g default-terminal "xterm"

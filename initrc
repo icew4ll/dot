@@ -1,6 +1,6 @@
 neofetch
 # source pass
-source $HOME/.ion/secret.ion
+# source $HOME/.ion/secret.ion
 
 # set vi mode
 set -o vi
@@ -60,9 +60,9 @@ alias cu='cargo install-update -a'
 alias ca='cargo add'
 alias rs='rustup self update'
 alias ru='rustup update'
-alias vs='$EDITOR $HOME/.ion/secret.ion'
+# alias vs='$EDITOR $HOME/.ion/secret.ion'
 alias vsf='$EDITOR $HOME/.env'
-alias ts='~/m/scripts/tmux'
+alias ts='~/m/dot/tmux'
 alias tc='$EDITOR ~/.tmux.conf.local'
 alias am='~/exp/ambk.exp'
 alias smtp2='~/exp/smtp2.exp'
@@ -81,7 +81,6 @@ alias arc01='~/exp/arc01.exp'
 alias ve='$EDITOR $HOME/.config/nvim/init.vim'
 alias v='$EDITOR'
 alias c='cicada'
-alias da='~/m/arc'
 alias dh='~/m/hop'
 alias cr='cargo run --'
 alias cb='cargo build'
